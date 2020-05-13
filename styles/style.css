@@ -1,0 +1,108 @@
+body {
+    --darkest: 5, 102, 141;
+    --dark: 2, 128, 144;
+    --light: 0, 168, 150;
+    --lightest: 2, 195, 154;
+    --white: 240, 243, 189;
+    background-color: rgba(var(--darkest), 0.5);
+}
+#header {
+    display: grid;
+    grid-template-columns: auto 450px auto;
+    width: 100%;
+    height: 150px;
+    background-color: rgba(var(--darkest), 0.3);
+    box-shadow: inset -1px 1px 1px rgba(120,120,120,0.7), inset 1px -1px 1px rgba(200,200,200, 0.9);
+    filter: grayscale(80%);
+}
+#header-title {
+    user-select: none;
+    font-family: sans-serif;
+    font-weight: 1000;
+    font-size: 75px;
+    grid-column: 2 / 3;
+    align-self: center;
+    justify-self: center;
+    color: rgba(var(--darkest), 0.6);
+    text-shadow: 0 1px 1px rgba(200, 200, 200 , 0.6);
+}
+#container {
+    display: grid;
+    width: 90vw;
+    height: auto;
+    grid-template-columns: 15% 70% 15%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#calculator {
+    grid-column: 2 / 3;
+    align-self: center;
+    justify-self: center;
+    width: 450px;
+    height: 600px;
+    background-color: rgb(var(--white));
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    border-radius: 10px;
+    border: solid 1px black;
+    margin-top: 30px;
+}
+#screen-container {
+    display: grid;
+    width: 100%;
+    height: 20%;
+}
+#screen {
+    width: 90%;
+    height: 80px;
+    align-self: center;
+    justify-self: center;
+    background-color: rgba(var(--darkest), 0.5);
+    text-align: end;
+    font-size: 70px;
+    user-select: none;
+    color: white;
+    text-shadow: 1px 0 1px black, 0 1px 1px black, 
+                -1px 0 1px black, 0 -1px 1px black;
+    border-radius: 10px;
+    border: 1px black solid;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+#buttons-container {
+    display: grid;
+    height: 80%;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+
+}
+.buttons {
+    height: 90%;
+    width: 90%;
+    background-color: rgba(var(--lightest), 0.3);
+    align-self: center;
+    justify-self: center;
+    border-radius: 5px;
+    border: solid 1px black;
+    text-align: center;
+    font-size: 75px;
+    text-shadow: 1px 0 1px black, 0 1px 1px black, 
+                -1px 0 1px black, 0 -1px 1px black;
+    color: rgb(145, 145, 145);
+    box-shadow: -1px 1px 3px black;
+    user-select: none;
+}
+.buttons:active {
+    box-shadow: inset -1px 1px 3px black;
+    font-size: 72px;
+}
+#ac, #pos-neg {
+    background-color: rgba(var(--lightest), 0.6);
+}
+#multiply, #subtract, #add, #divide {
+    background-color: rgba(var(--dark), 0.5)
+}
+#equals {
+    background-color: rgba(var(--darkest), 0.7)
+}
